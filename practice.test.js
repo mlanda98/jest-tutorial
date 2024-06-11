@@ -1,5 +1,9 @@
-const capitalize = require("./practice");
+const {capitalize, reverseString} = require("./practice");
 
-test("capitalizes the first letter of a word", () => {
+test("capitalize should capitalize the first letter of a word", () => {
   expect(capitalize("hi")).toBe("Hi");
+});
+
+test("reverseString should reverse a string", () => {
+  expect(reverseString("hi")).toBe("ih");
 });
