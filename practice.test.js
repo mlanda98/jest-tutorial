@@ -1,4 +1,4 @@
-const {capitalize, reverseString, calculator} = require("./practice");
+const {capitalize, reverseString, calculator, caesarCipher} = require("./practice");
 
 test("capitalize should capitalize the first letter of a word", () => {
   expect(capitalize("hi")).toBe("Hi");
@@ -26,4 +26,10 @@ test("divide function divides two numbers correctly", () => {
 
 test("divide function throws error when dividing by zero", () => {
   expect(() => calculator.divide(10, 0)).toThrowError("Division by zero");
+});
+
+test("caesarCipher is a function that takes a string and a shift factor and returns it with each character shifted", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+
+  expect(caesarCipher("Khoor, Zruog!", -3)).toBe("Hello, World!");
 });
