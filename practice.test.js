@@ -1,4 +1,4 @@
-const {capitalize, reverseString, calculator, caesarCipher} = require("./practice");
+const {capitalize, reverseString, calculator, caesarCipher, analyzeArray} = require("./practice");
 
 test("capitalize should capitalize the first letter of a word", () => {
   expect(capitalize("hi")).toBe("Hi");
@@ -32,4 +32,15 @@ test("caesarCipher is a function that takes a string and a shift factor and retu
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 
   expect(caesarCipher("Khoor, Zruog!", -3)).toBe("Hello, World!");
+});
+
+test("analyzeArray is a function that takes an array of numbers and returns an object with the average, min, max, and length", () => {
+  const numbers = [1, 2, 3, 4, 5];
+  const result = analyzeArray(numbers);
+  expect(result).toEqual({
+    average: 3,
+    min: 1, 
+    max: 5, 
+    length: 5
+  });
 });
